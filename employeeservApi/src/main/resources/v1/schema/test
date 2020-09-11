@@ -1,0 +1,14 @@
+DROP TABLE IF EXISTS employee_data;
+
+CREATE TABLE employee_data (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  first_name VARCHAR(250) NOT NULL CHECK (first_name <> ''),
+  last_name VARCHAR(250) NOT NULL CHECK (last_name <> ''),
+  date_of_birth VARCHAR(250) NOT NULL CHECK (date_of_birth <> ''),
+  address_Line_1 VARCHAR(250) CHECK (address_Line_1 <> ''),
+  address_Line_2 VARCHAR(250),
+  city VARCHAR(250) CHECK (city <> ''),
+  state VARCHAR(2) CHECK (state <> ''),
+  country VARCHAR(250) CHECK (country <> ''),
+  zip_code VARCHAR(250) CHECK (zip_code <> '')
+);
